@@ -36,3 +36,11 @@ echo Converting lakes to geojson
 node node_modules/.bin/shp2json \
   $PATH_TO_SHP/g1s18 \
   -o data/lakes.json
+
+echo Merging all as topojson
+node node_modules/.bin/geo2topo \
+  communes=data/communes.json \
+  districts=data/districts.json \
+  cantons=data/cantons.json \
+  lakes=data/lakes.json \
+  > data/switzerland.topo.json

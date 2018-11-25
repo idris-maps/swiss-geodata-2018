@@ -12,7 +12,8 @@ const {
   communes,
   districts,
   lakes,
+  switzerland,
 } = require('swiss-geodata-2018')
 ```
 
-All are GeoJSON collections of Polygons/MultiPolygons
+All are GeoJSON collections of Polygons/MultiPolygons, except `switzerland` that is a topojson containing all other four.
